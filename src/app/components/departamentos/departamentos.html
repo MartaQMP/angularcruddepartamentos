@@ -1,0 +1,28 @@
+<div id="div1">
+    <h1 id="titulo">Departamentos</h1>
+    <br />
+    <table class="table table-striped" style="width: 70%; margin: auto">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Localidad</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (dpto of departamentos; track dpto) {
+            <tr>
+                <td>{{ dpto.numero }}</td>
+                <td>{{ dpto.nombre }}</td>
+                <td>{{ dpto.localidad }}</td>
+                <td>
+                    <a class="btn btn-outline-dark" [routerLink]="['/details/' + dpto.numero]"
+                        >Details</a
+                    >
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

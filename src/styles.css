@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+#div1 {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+#titulo {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+    padding: 5px;
+}

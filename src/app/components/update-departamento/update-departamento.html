@@ -1,0 +1,13 @@
+<div id="div1">
+    <h1 id="titulo">Crear Departamento</h1>
+    <form (ngSubmit)="modificarDepartamento()" #form="ngForm" style="width: 60%; margin: auto;">
+        <label class="form-label">ID:</label>
+        <input class="form-control" name="cajaId" #cajaId />
+        <label class="form-label">Nombre:</label>
+        <input class="form-control" name="cajaNombre" #cajaNombre />
+        <label class="form-label">Localidad:</label>
+        <input class="form-control" name="cajaLocalidad" #cajaLocalidad />
+        <br />
+        <button class="btn btn-success">Crear</button>
+    </form>
+</div>
