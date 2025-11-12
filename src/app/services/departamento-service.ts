@@ -12,13 +12,11 @@ export class DepartamentoService {
         let request = 'api/departamentos';
         return this._http.get<Array<Departamento>>(environment.urlDepartamentos + request);
     }
-    
-    getDepartamentoId(numero: number): Observable<Array<Departamento>> {
-        let request = 'api/departamentos/'+numero;
-        return this._http.get<Array<Departamento>>(environment.urlDepartamentos + request);
+
+    getDepartamentoId(numero: number): Observable<Departamento> {
+        let request = 'api/departamentos/' + numero;
+        return this._http.get<Departamento>(environment.urlDepartamentos + request);
     }
-
-
 
     crearDepartamento(departamento: Departamento): Observable<any> {
         let request = 'api/departamentos';
@@ -37,5 +35,10 @@ export class DepartamentoService {
         return this._http.put(environment.urlDepartamentos + request, dataJson, {
             headers: header,
         });
+    }
+
+    deleteDepartamento(numero: number): Observable<any> {
+        let request = 'api/departamentos/' + numero;
+        return this._http.delete(environment.urlDepartamentos + request);
     }
 }

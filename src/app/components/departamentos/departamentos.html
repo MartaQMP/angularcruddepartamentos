@@ -8,6 +8,8 @@
                 <th>Nombre</th>
                 <th>Localidad</th>
                 <th></th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -17,9 +19,22 @@
                 <td>{{ dpto.nombre }}</td>
                 <td>{{ dpto.localidad }}</td>
                 <td>
-                    <a class="btn btn-outline-dark" [routerLink]="['/details/' + dpto.numero]"
+                    <a class="btn btn-outline-dark" [routerLink]="['/details' , dpto.numero]"
                         >Details</a
                     >
+                </td>
+                <td>
+                    <a class="btn btn-outline-warning" [routerLink]="['/update' , dpto.numero]"
+                        >Modificar</a
+                    >
+                </td>
+                <td>
+                    <button
+                        class="btn btn-outline-danger"
+                        (click)="borrarDepartamento(dpto.numero)"
+                    >
+                        Eliminar
+                    </button>
                 </td>
             </tr>
             }

@@ -1,1 +1,15 @@
-<p>details works!</p>
+<div id="div1">
+    <h1 id="titulo">Detalles</h1>
+    @if(departamento){
+    <div class="card" style="width: 40%; margin: auto; margin-top: 5%;">
+        <div class="card-header">{{departamento.numero}}</div>
+        <div class="card-body">
+            <h5 class="card-title">{{departamento.nombre}}</h5>
+            <p class="card-text">
+                {{departamento.localidad}}
+            </p>
+            <a [routerLink]="['/']" class="btn btn-primary">Home</a>
+        </div>
+    </div>
+    }
+</div>

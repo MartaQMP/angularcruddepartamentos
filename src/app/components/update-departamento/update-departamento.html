@@ -1,13 +1,15 @@
 <div id="div1">
-    <h1 id="titulo">Crear Departamento</h1>
-    <form (ngSubmit)="modificarDepartamento()" #form="ngForm" style="width: 60%; margin: auto;">
+    <h1 id="titulo">Actualizar Departamento</h1>
+    @if(departamento){
+    <form (ngSubmit)="modificarDepartamento()" #form="ngForm" style="width: 60%; margin: auto">
         <label class="form-label">ID:</label>
-        <input class="form-control" name="cajaId" #cajaId />
+        <input class="form-control" name="cajaId" #cajaId defaultValue={{departamento.numero}} disabled />
         <label class="form-label">Nombre:</label>
-        <input class="form-control" name="cajaNombre" #cajaNombre />
+        <input class="form-control" name="cajaNombre" #cajaNombre defaultValue={{departamento.nombre}}/>
         <label class="form-label">Localidad:</label>
-        <input class="form-control" name="cajaLocalidad" #cajaLocalidad />
+        <input class="form-control" name="cajaLocalidad" #cajaLocalidad defaultValue={{departamento.localidad}} />
         <br />
-        <button class="btn btn-success">Crear</button>
+        <button class="btn btn-success">Actualizar</button>
     </form>
+    }
 </div>
